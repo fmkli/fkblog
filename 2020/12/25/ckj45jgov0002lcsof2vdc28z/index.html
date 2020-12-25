@@ -26,7 +26,7 @@
 
   
 
-  <title>归档: 2020 | fmkli的博客</title>
+  <title>博客换新 | fmkli的博客</title>
 
   
 
@@ -114,42 +114,118 @@
 </header>
 
     
-<div class="post-wrap archive">
+<article id="post">
+  <div class="post-title">博客换新</div>
+  
+<div class="post-meta">
     
     
-        
-        
-        <div class="yearzodiac">
-                <div class="years">
-                  <h1>2020  <i class="symbolic-animals icon-rat"></i></h1>
-                </div>
-        </div>
-        
-        <li class="archive-item">
-            <a class="archive-item-link" href="/2020/12/25/ckj45jgov0002lcsof2vdc28z/">博客换新</a>
-            <span class="archive-item-date">2020-12-25</span>
-        </li>
+      <div class="post-meta-item date">
+        <span title="发表于 2020.12.25"><i class="far fa-calendar-alt"></i> 2020.12.25</span>
+      </div>
+      <div class="post-meta-item updated">
+        <span title="更新于 2020.12.25"><i class="far fa-calendar-check"></i> 2020.12.25</span>
+      </div>
+     
+     
     
+     <div class="post-meta-item wordcount">
         
+          <i class="fas fa-pencil-alt"></i> <span class="post-count">15 字</span>
+           
         
-        <li class="archive-item">
-            <a class="archive-item-link" href="/2020/12/24/ckj45jgol0001lcso9dk91bth/">Hello World</a>
-            <span class="archive-item-date">2020-12-24</span>
-        </li>
-    
-    <div class="arc_pag">
-       <nav class="paginator">
-      
-            
-</nav>
-
-     </div>
+          <i class="far fa-clock"></i> <span class="post-count">1 分钟</span>
+                               
+      </div>
+     
 </div>
 
 
+  
+  <div class="content">
+        <div><p>经过一般曲折，终于安定了小博客，呼</p>
+</div>
+        
+          <div class="post-copyright">
+                  <div class="copyright-item">
+                      <span> 作者: Fmkli</span>
+                  </div>
+                  <div class="copyright-item">
+                      <span> 链接: <a href="https://blog.fmkli.ga/2020/12/25/ckj45jgov0002lcsof2vdc28z/">https://blog.fmkli.ga/2020/12/25/ckj45jgov0002lcsof2vdc28z/</a></span>
+                  </div>
+                  <div class="copyright-item">
+                      <span> 声明: 本博客所有文章除特别声明外，均采用许可协议 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> 转载请注明出处！</span>
+                  </div>
+          </div>
+        
+  </div>
+
+  <div class="share-reward">
+    <div class="share">
+        
+<div class="social-share" data-sites="facebook,twitter,wechat,weibo,qq"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css">
+<script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script>
 
 
-
+      </div>
+        <div class="reward">
+          
+  <div style="padding: 10px 0; margin-left: 20px; width: 90%; text-align: center;">
+    <div class="reward-content">
+        <ul id="donateBox" class="list pos-a">
+          
+           <li id="PayPal"><a href="https://paypal.me" target="_blank" title="贝宝">贝宝</a></li>
+            
+          
+            <li id="AliPay" title="支付宝"><img data-img="/img/alipay.jpg" onerror=this.onerror=null,this.src="/img/loading.gif"></img></li>
+               
+                 
+            <li id="WeChat" title="微信"><img date-img="/img/wechat.jpg" onerror=this.onerror=null,this.src="/img/loading.gif"></img></li>
+                      
+          </ul>
+        <div id="QRBox" class="pos-f left-100">
+          <div id="MainBox"></div>
+        </div>
+    </div>
+  </div>
+  
+        </div>
+    </div>
+    
+    <div class="post_tags">
+      
+    </div>
+    <div class="post-nav">
+      
+      
+        <div class="post-nav-next post-nav-item">
+            <a href="/2020/12/24/ckj45jgol0001lcso9dk91bth/" >Hello World<i class="fa fa-chevron-right"></i></a>
+        </div>
+      
+    </div>
+      
+    <div id="valine"></div>
+    <script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script>
+    <script>
+          new Valine({
+            el: '#valine',
+            appId: "",
+            appKey: "",
+            avatar: "mm",
+            lang: "",
+            meta: 'nick,mail,link'.split(','),
+            requiredFields: 'nick,mail'.split(','),
+            placeholder: "评论记得带上邮箱,你的留言我会马上收到邮箱提醒哒",
+            pageSize:'10',
+            recordIP: 'false',
+            serverURLs: "",
+            emojiCDN: "",
+            enableQQ: "true",
+          });
+    </script>
+    
+</article>
 
     
 <a id="gotop" href="javascript:" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
@@ -275,6 +351,45 @@ if (document.getElementsByClassName('mermaid').length) {
   
 
 
+  <script>
+    jQuery(document).ready(function () {
+      var QRBox = $('#QRBox');
+      var MainBox = $('#MainBox');
+      var AliPayQR = '/img/alipay.jpg';
+      var WeChanQR = '/img/wechat.jpg';
+
+      function showQR(QR) {
+        if (QR) {
+          MainBox.css('background-image', 'url(' + QR + ')');
+        }
+        $('#donateBox').addClass('blur');
+        QRBox.fadeIn(300, function (argument) {
+          MainBox.addClass('showQR');
+        });
+      }
+
+      $('#donateBox>li').click(function (event) {
+        var thisID = $(this).attr('id');
+        if (thisID === 'AliPay') {
+          showQR(AliPayQR);
+        } else if (thisID === 'WeChat') {
+          showQR(WeChanQR);
+        }
+      });
+
+      MainBox.click(function (event) {
+        MainBox.removeClass('showQR').addClass('hideQR');
+        setTimeout(function (a) {
+          QRBox.fadeOut(300, function (argument) {
+            MainBox.removeClass('hideQR');
+          });
+          $('#DonateText,#donateBox,#github').removeClass('blur');
+        }, 600);
+
+      });
+    });
+  </script>
+  
 
 
 
