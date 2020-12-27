@@ -291,7 +291,7 @@ li {
 .header .title,
 .header .logo {
   text-align: center;
-  font-family: fmkli;
+  font-family: Fmkli的blog;
   text-decoration: none;
   font-size: 5rem;
   font-weight: bold;
@@ -402,7 +402,7 @@ li {
   transition: all 400ms ease-out;
 }
 .nav .layui-container .nav-title {
-  font-family: fmkli;
+  font-family: Fmkli的blog;
   padding: 0.5em;
   font-weight: 700;
   font-size: 1.5em;
