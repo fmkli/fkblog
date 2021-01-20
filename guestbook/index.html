@@ -26,7 +26,7 @@
 
   
 
-  <title>页面没有找到 | fmkli的博客</title>
+  <title>留言板 | fmkli的博客</title>
 
   
 
@@ -140,31 +140,35 @@
      
 </header>
 
-      
+    
+<article class="post-wrap page">
+    <h1 class="pagetitle">留言板</h1>
+    <section class="content">
+        
+                <head>
+  ..
+  <script src='//cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js'></script>
+  ...
+</head>
+<body>
+  ...
+  <div id="waline"></div>
+  <script>
+    new Waline({
+      el: '#waline',
+      path: location.pathname,
+      serverURL: 'https://sdf-three.vercel.app/'
+    });
+  </script>
+</body>
+        
+     </section>
+        
+</article>
 
-<div class="post-wrap">
-<div class="container">
-    <h2>Oops! Page not found.</h2>
-    <h1>404</h1>
-  </div>
 
-<style>
-.container{
-  width: 100%;
-  max-width: 700px;
-  margin: 100px auto 0;
-  transform: translateY(-50%);
-  text-align: center;
-  color: #343434
-}
-.container h1{
-  font-size: 160px;
-  margin: 0;
-  font-weight: 900;
-  letter-spacing: 20px;
-}
-</style>
-</div>
+
+
     
 <a id="gotop" href="javascript:" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
     
