@@ -34,6 +34,8 @@
 
   
 
+  <link rel="stylesheet" href="/css/style.css" >
+  <link rel="stylesheet" href="/css/partial/dark.css" >
 
   
   
@@ -44,16 +46,19 @@
 
   
     
-      <link rel="stylesheet" href="/css/style.css">
+      <link rel="stylesheet" href="/css/partial/highlight/atom-one-light.css">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css">
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/css/socialiconfont.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/css/iconfont.css">
     
   
 
+  
+    <script src="/js/todark.js"></script>
+    
 <meta name="generator" content="Hexo 5.3.0"></head>
 </html>
     
@@ -100,7 +105,7 @@
                     
                     
                         <li class="layui-nav-item" id="btn-toggle-dark">🌙</li>
-                        
+                    
                     <span class="layui-nav-bar" style="left: 342px; top: 78px; width: 0px; opacity: 0;"></span>
                 </ul>
             </div>
@@ -218,7 +223,7 @@
         
     </div>  
   </div>
-
+  
 <script src="https://cdn.jsdelivr.net/npm/layui-src@2.5.5/dist/layui.min.js"></script>
 
 
@@ -263,71 +268,24 @@
   
 
 
-  <script>
-  if (!window.MathJax) {
-    window.MathJax = {
-      loader: {
-        source: {
-          '[tex]/amsCd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"]],
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
-              const display = !!node.type.match(/; *mode=display/)
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
-              const text = document.createTextNode('')
-              node.parentNode.replaceChild(text, node)
-              math.start = {node: text, delim: '', n: 0}
-              math.end = {node: text, delim: '', n: 0}
-              doc.math.push(math)
-            }
-          }, '']
-        }
-      }
-    }
-    
-    var script = document.createElement('script')
-    script.src = "https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"
-    script.id = 'MathJax-script'
-    script.async = true
-    document.head.appendChild(script)
-  } else {
-    MathJax.startup.document.state(0)
-    MathJax.texReset()
-    MathJax.typeset()
-  }
-  </script>
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script>
+  
+
+
+  <script src="https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/js/firework.js"></script>
   
 
 
   
-<script>
-if (document.getElementsByClassName('mermaid').length) {
-    if (window.mermaidJsLoad) mermaid.init()
-    else {
-      $.getScript("https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js", function () {
-        window.mermaidJsLoad = true
-        mermaid.initialize({
-          theme: "default",
-        })
-      })
-    }
-  }
-  </script>
-  
-
-
-
-
-
-
-  <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js"></script>
 <script>
 !function (e, t, a) {
   var initCopyCode = function(){
@@ -344,19 +302,7 @@ if (document.getElementsByClassName('mermaid').length) {
   }
   initCopyCode();
 }(window, document);
-</script>
-  
-
-
-  <script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script>
-  
-
-
-  <script src="https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/js/firework.js"></script>
-  
-
-
-  <script src="/js/todark.js"></script>
+</script>  
   
 
 <script>

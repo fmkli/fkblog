@@ -34,6 +34,8 @@
 
   
 
+  <link rel="stylesheet" href="/css/style.css" >
+  <link rel="stylesheet" href="/css/partial/dark.css" >
 
   
   
@@ -44,16 +46,19 @@
 
   
     
-      <link rel="stylesheet" href="/css/style.css">
+      <link rel="stylesheet" href="/css/partial/highlight/atom-one-light.css">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css">
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/css/socialiconfont.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/css/iconfont.css">
     
   
 
+  
+    <script src="/js/todark.js"></script>
+    
 <meta name="generator" content="Hexo 5.3.0"></head>
 </html>
     
@@ -100,7 +105,7 @@
                     
                     
                         <li class="layui-nav-item" id="btn-toggle-dark">🌙</li>
-                        
+                    
                     <span class="layui-nav-bar" style="left: 342px; top: 78px; width: 0px; opacity: 0;"></span>
                 </ul>
             </div>
@@ -173,53 +178,8 @@
         <div><p>气屎我了，fmkli.js.org打不开QAQ<br><br><br>issues提交了<br><br><br>等~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
 </div>
         
-          <div class="post-copyright">
-                  <div class="copyright-item">
-                      <span> 作者: Fmkli</span>
-                  </div>
-                  <div class="copyright-item">
-                      <span> 链接: <a href="https://blog.fmkli.ga/2021/%E6%B7%A6%EF%BC%81/">https://blog.fmkli.ga/2021/%E6%B7%A6%EF%BC%81/</a></span>
-                  </div>
-                  <div class="copyright-item">
-                      <span> 声明: 本博客所有文章除特别声明外，均采用许可协议 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> 转载请注明出处！</span>
-                  </div>
-          </div>
-        
   </div>
 
-  <div class="share-reward">
-    <div class="share">
-        
-<div class="social-share" data-sites="facebook,twitter,wechat,weibo,qq"></div>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css">
-<script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script>
-
-
-      </div>
-        <div class="reward">
-          
-  <div style="padding: 10px 0; margin-left: 20px; width: 90%; text-align: center;">
-    <div class="reward-content">
-        <ul id="donateBox" class="list pos-a">
-          
-           <li id="PayPal"><a href="https://paypal.me" target="_blank" title="贝宝">贝宝</a></li>
-            
-          
-            <li id="AliPay" title="支付宝"><img data-img="/img/alipay.jpg" onerror=this.onerror=null,this.src="/img/loading.gif"></img></li>
-               
-                 
-            <li id="WeChat" title="微信"><img date-img="/img/wechat.jpg" onerror=this.onerror=null,this.src="/img/loading.gif"></img></li>
-                      
-          </ul>
-        <div id="QRBox" class="pos-f left-100">
-          <div id="MainBox"></div>
-        </div>
-    </div>
-  </div>
-  
-        </div>
-    </div>
-    
     <div class="post_tags">
       
     </div>
@@ -236,26 +196,42 @@
       
     </div>
       
-    <div id="valine"></div>
-    <script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script>
+
+    <script src='//unpkg.com/@waline/client/dist/Waline.min.js'></script>
+    <div id="waline"></div>
     <script>
-          new Valine({
-            el: '#valine',
-            appId: "rRTo2bc2jc6aMEC9wtNUb0nN-MdYXbMMI",
-            appKey: "x3e5cT6MapqFMnjDe4jxjbev",
-            avatar: "mm",
-            lang: "",
-            meta: 'nick,mail,link'.split(','),
-            requiredFields: 'nick,mail'.split(','),
-            placeholder: "评论记得带上邮箱,你的留言我会马上收到邮箱提醒哒",
-            pageSize:'10',
-            recordIP: 'false',
-            serverURLs: "",
-            emojiCDN: "",
-            enableQQ: "true",
-          });
+    new Waline({
+        el: '#waline',
+        path: location.pathname,
+        serverURL: "https://sdf-three.vercel.app/",
+        avatar: "monsterid",
+        placeholder: "Just go go"
+    });
     </script>
-    
+
+
+
+  <div id="valine"></div>
+  <script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script>
+  <script>
+        new Valine({
+          el: '#valine',
+          appId: "",
+          appKey: "",
+          avatar: "mm",
+          lang: "",
+          meta: 'nick,mail,link'.split(','),
+          requiredFields: 'nick,mail'.split(','),
+          placeholder: "评论记得带上邮箱,你的留言我会马上收到邮箱提醒哒",
+          pageSize:'10',
+          recordIP: 'false',
+          serverURLs: "",
+          emojiCDN: "",
+          enableQQ: "true",
+        });
+  </script>
+  
+
 </article>
 
     
@@ -277,7 +253,7 @@
         
     </div>  
   </div>
-
+  
 <script src="https://cdn.jsdelivr.net/npm/layui-src@2.5.5/dist/layui.min.js"></script>
 
 
@@ -322,110 +298,24 @@
   
 
 
-  <script>
-  if (!window.MathJax) {
-    window.MathJax = {
-      loader: {
-        source: {
-          '[tex]/amsCd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"]],
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
-              const display = !!node.type.match(/; *mode=display/)
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
-              const text = document.createTextNode('')
-              node.parentNode.replaceChild(text, node)
-              math.start = {node: text, delim: '', n: 0}
-              math.end = {node: text, delim: '', n: 0}
-              doc.math.push(math)
-            }
-          }, '']
-        }
-      }
-    }
-    
-    var script = document.createElement('script')
-    script.src = "https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"
-    script.id = 'MathJax-script'
-    script.async = true
-    document.head.appendChild(script)
-  } else {
-    MathJax.startup.document.state(0)
-    MathJax.texReset()
-    MathJax.typeset()
-  }
-  </script>
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script>
+  
+
+
+  <script src="https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/js/firework.js"></script>
   
 
 
   
-<script>
-if (document.getElementsByClassName('mermaid').length) {
-    if (window.mermaidJsLoad) mermaid.init()
-    else {
-      $.getScript("https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js", function () {
-        window.mermaidJsLoad = true
-        mermaid.initialize({
-          theme: "default",
-        })
-      })
-    }
-  }
-  </script>
-  
-
-
-  <script>
-    jQuery(document).ready(function () {
-      var QRBox = $('#QRBox');
-      var MainBox = $('#MainBox');
-      var AliPayQR = '/img/alipay.jpg';
-      var WeChanQR = '/img/wechat.jpg';
-
-      function showQR(QR) {
-        if (QR) {
-          MainBox.css('background-image', 'url(' + QR + ')');
-        }
-        $('#donateBox').addClass('blur');
-        QRBox.fadeIn(300, function (argument) {
-          MainBox.addClass('showQR');
-        });
-      }
-
-      $('#donateBox>li').click(function (event) {
-        var thisID = $(this).attr('id');
-        if (thisID === 'AliPay') {
-          showQR(AliPayQR);
-        } else if (thisID === 'WeChat') {
-          showQR(WeChanQR);
-        }
-      });
-
-      MainBox.click(function (event) {
-        MainBox.removeClass('showQR').addClass('hideQR');
-        setTimeout(function (a) {
-          QRBox.fadeOut(300, function (argument) {
-            MainBox.removeClass('hideQR');
-          });
-          $('#DonateText,#donateBox,#github').removeClass('blur');
-        }, 600);
-
-      });
-    });
-  </script>
-  
-
-
-
-
-  <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js"></script>
 <script>
 !function (e, t, a) {
   var initCopyCode = function(){
@@ -442,19 +332,7 @@ if (document.getElementsByClassName('mermaid').length) {
   }
   initCopyCode();
 }(window, document);
-</script>
-  
-
-
-  <script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script>
-  
-
-
-  <script src="https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/js/firework.js"></script>
-  
-
-
-  <script src="/js/todark.js"></script>
+</script>  
   
 
 <script>

@@ -34,6 +34,8 @@
 
   
 
+  <link rel="stylesheet" href="/css/style.css" >
+  <link rel="stylesheet" href="/css/partial/dark.css" >
 
   
   
@@ -44,16 +46,19 @@
 
   
     
-      <link rel="stylesheet" href="/css/style.css">
+      <link rel="stylesheet" href="/css/partial/highlight/atom-one-light.css">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css">
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/css/socialiconfont.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/css/iconfont.css">
     
   
 
+  
+    <script src="/js/todark.js"></script>
+    
 <meta name="generator" content="Hexo 5.3.0"></head>
 </html>
     
@@ -100,7 +105,7 @@
                     
                     
                         <li class="layui-nav-item" id="btn-toggle-dark">🌙</li>
-                        
+                    
                     <span class="layui-nav-bar" style="left: 342px; top: 78px; width: 0px; opacity: 0;"></span>
                 </ul>
             </div>
@@ -172,11 +177,11 @@
         </div>
           <div class="content">
             
-                  <p>一、我的QQ<br>2058264685<br>有事可以私信（例如建站）<br>二、我的邮箱<br><a href="mailto:&#x66;&#109;&#107;&#x6c;&#105;&#50;&#64;&#x71;&#x71;&#x2e;&#x63;&#x6f;&#109;">&#x66;&#109;&#107;&#x6c;&#105;&#50;&#64;&#x71;&#x71;&#x2e;&#x63;&#x6f;&#109;</a><br><a href="mailto:&#105;&#x6d;&#102;&#109;&#107;&#108;&#105;&#x40;&#103;&#109;&#x61;&#105;&#108;&#46;&#x63;&#x6f;&#109;">&#105;&#x6d;&#102;&#109;&#107;&#108;&#105;&#x40;&#103;&#109;&#x61;&#105;&#108;&#46;&#x63;&#x6f;&#109;</a><br>三、我的bilibili<br><a target="_blank" rel="noopener" href="https://space.bilibili.com/543825809">https://space.bilibili.com/543825809</a><br>id：543825809<br>四、我自己的网站<br><a target="_blank" rel="noopener" href="https://fmkli.js.org/">https://fmkli.js.org</a><br><a href="https://blog.fmkli.ga/">https://blog.fmkli.ga(blog)</a><br>thank you</p>
+                  <p>一、我的QQ<br>2058264685<br>有事可以私信（例如建站）<br>二、我的邮箱<br><a href="mailto:&#x66;&#x6d;&#107;&#108;&#105;&#50;&#64;&#113;&#113;&#x2e;&#x63;&#111;&#109;">&#x66;&#x6d;&#107;&#108;&#105;&#50;&#64;&#113;&#113;&#x2e;&#x63;&#111;&#109;</a><br><a href="mailto:&#x69;&#x6d;&#x66;&#x6d;&#107;&#x6c;&#105;&#64;&#x67;&#x6d;&#97;&#105;&#108;&#x2e;&#99;&#111;&#109;">&#x69;&#x6d;&#x66;&#x6d;&#107;&#x6c;&#105;&#64;&#x67;&#x6d;&#97;&#105;&#108;&#x2e;&#99;&#111;&#109;</a><br>三、我的bilibili<br><a target="_blank" rel="noopener" href="https://space.bilibili.com/543825809">https://space.bilibili.com/543825809</a><br>id：543825809<br>四、我自己的网站<br><a target="_blank" rel="noopener" href="https://fmkli.js.org/">https://fmkli.js.org</a><br><a href="https://blog.fmkli.ga/">https://blog.fmkli.ga(blog)</a><br>thank you</p>
 
              
           </div>
-      </div>
+        </div>
       <div class="post-footer">
         
     </div>
@@ -243,7 +248,7 @@
 
              
           </div>
-      </div>
+        </div>
       <div class="post-footer">
         
     </div>
@@ -280,7 +285,7 @@
 
              
           </div>
-      </div>
+        </div>
       <div class="post-footer">
         
     </div>
@@ -317,7 +322,7 @@
 
              
           </div>
-      </div>
+        </div>
       <div class="post-footer">
         
     </div>
@@ -354,7 +359,7 @@
 
              
           </div>
-      </div>
+        </div>
       <div class="post-footer">
         
     </div>
@@ -391,7 +396,7 @@
 
              
           </div>
-      </div>
+        </div>
       <div class="post-footer">
         
     </div>
@@ -436,7 +441,7 @@
 
              
           </div>
-      </div>
+        </div>
       <div class="post-footer">
         
     </div>
@@ -469,7 +474,7 @@
         
     </div>  
   </div>
-
+  
 <script src="https://cdn.jsdelivr.net/npm/layui-src@2.5.5/dist/layui.min.js"></script>
 
 
@@ -514,71 +519,24 @@
   
 
 
-  <script>
-  if (!window.MathJax) {
-    window.MathJax = {
-      loader: {
-        source: {
-          '[tex]/amsCd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"]],
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
-              const display = !!node.type.match(/; *mode=display/)
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
-              const text = document.createTextNode('')
-              node.parentNode.replaceChild(text, node)
-              math.start = {node: text, delim: '', n: 0}
-              math.end = {node: text, delim: '', n: 0}
-              doc.math.push(math)
-            }
-          }, '']
-        }
-      }
-    }
-    
-    var script = document.createElement('script')
-    script.src = "https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"
-    script.id = 'MathJax-script'
-    script.async = true
-    document.head.appendChild(script)
-  } else {
-    MathJax.startup.document.state(0)
-    MathJax.texReset()
-    MathJax.typeset()
-  }
-  </script>
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script>
+  
+
+
+  <script src="https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/js/firework.js"></script>
   
 
 
   
-<script>
-if (document.getElementsByClassName('mermaid').length) {
-    if (window.mermaidJsLoad) mermaid.init()
-    else {
-      $.getScript("https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js", function () {
-        window.mermaidJsLoad = true
-        mermaid.initialize({
-          theme: "default",
-        })
-      })
-    }
-  }
-  </script>
-  
-
-
-
-
-
-
-  <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js"></script>
 <script>
 !function (e, t, a) {
   var initCopyCode = function(){
@@ -595,19 +553,7 @@ if (document.getElementsByClassName('mermaid').length) {
   }
   initCopyCode();
 }(window, document);
-</script>
-  
-
-
-  <script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script>
-  
-
-
-  <script src="https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/js/firework.js"></script>
-  
-
-
-  <script src="/js/todark.js"></script>
+</script>  
   
 
 <script>
